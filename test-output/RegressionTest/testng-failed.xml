@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [RegressionTest]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="S2practice.registration">
+        <methods>
+          <include name="register_Webshop" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- S2practice.registration -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [RegressionTest] -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegressionTest" thread-count = '2' parallel ='classes'>
+    <test name="Test">
+      <!--<parameter name= "email" value = "xyz@gmail.com"/>
+      <parameter name= "password" value ="xyz123456"/> -->
+         <classes>
+             <class name="S2practice.registration"/>
+           <!--  <class name="Googletest.MapsTest"/>
+             <class name="Googletest.ImagesTest"/> -->
+          </classes> 
+     </test> <!-- Test -->
+   
+     
+   
+     
+     
+     
+     
+     
+     
+</suite> <!-- Suite -->
