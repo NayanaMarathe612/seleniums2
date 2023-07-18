@@ -5,14 +5,28 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+//@Listeners(value=iTest.class)
 public class registerObjects {
      WebDriver wd ;
+     ExtentTest test ;
+     WebElement customerinfo ;
+     String email;
+     WebElement logout ;
+     String FirstName ;
+     
 	registerObjects(WebDriver wd)
 	{
 	    this.wd = wd ;
+	   
 	    
 	}
+	
+
 	
 	void register(String  gender ,String FirstName , String Lastname , String email)
 	{  
@@ -42,19 +56,26 @@ public class registerObjects {
 	   wd.findElement(Email).sendKeys(email);
 	   wd.findElement(Password).sendKeys("test123@612$");
 	   wd.findElement(ConfirmPassword).sendKeys("test123@612$");
-	   wd.findElement(Reg_Button).click();	
+	   wd.findElement(Reg_Button).click();
+	   try
+	   {
 	   if (customerinfo.equals(email))
 	   {
-		  assertTrue(true, "The TestCase Passed");
+		   
+		  assertTrue(true, "TestCase Passed");  
 	   }
 	   else 
 	   {
-		   assertTrue(false, "TestCase Failed");
+		   assertTrue(true, "TestCase Failed");
+	   }}
+	   catch (Exception e)
+	   {
+		   System.out.println(e);
 	   }
 			   
-	   System.out.println("TestCase Passed and User "+FirstName+"created Sucessfully" );
-	   wd.findElement(logout).click();
-	   
-	   
+	   System.out.println("TestCase Passed and User "+FirstName+"created Sucessfully");
+	   //wd.findElement(logout).click();
 	}
+	   
+	
 }

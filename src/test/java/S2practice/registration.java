@@ -26,9 +26,10 @@ public class registration {
 	
 	
 @BeforeTest
-public void beforeTest() {
+public void beforeTest() throws InterruptedException {
 	 WebDriverManager.chromedriver().setup();
-	  wd = new ChromeDriver();	  
+	  wd = new ChromeDriver();	
+	  Thread.sleep(1000);
 	  }
 
 
@@ -70,8 +71,8 @@ public void beforeTest() {
   public Object[][] getdata(){
 	  Map<String, List<String>>reguser = new HashMap<String , List<String>>();
 	  {
-	    reguser.put("user1",Arrays.asList( "Male", "kite", "kapoor", "kite_kapoor@gmail.com"));
-	    reguser.put("user2",Arrays.asList("female","Riya","kapoor", "riya_kapoor@gmail.com"));
+	    reguser.put("user1",Arrays.asList( "Male", "xyz" ,"abc", "xzy_abc@gmail.com"));
+	   // reguser.put("user2",Arrays.asList("female","Piya" ,"kapoor", "piya_kapoor@gmail.com"));
 	   
 	      return new Object[][]{{reguser}};
 	  }

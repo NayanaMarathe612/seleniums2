@@ -9,6 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.implementation.Implementation.Context;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.BeforeTest;
 
@@ -24,6 +25,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
+
+
 
 public class login {
 	
@@ -50,6 +53,7 @@ public class login {
  @Parameters({"email","password"})
   public void loginTest() throws InterruptedException{
 	  wd.get("https://demowebshop.tricentis.com/");
+	  Thread.sleep(2000);
 	  
 //    String Lemail = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("email");
 //    String Lpass = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("password") ;

@@ -5,7 +5,7 @@
     <classes>
       <class name="S2practice.registration">
         <methods>
-          <include name="register_Webshop"/>
+          <include name="register_Webshop" invocation-numbers="0"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>
